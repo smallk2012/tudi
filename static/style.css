@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+html,body,#app,.mint-container,.mint-main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.mint-header.is-fixed{
+	z-index: 100;
+}
+.mint-tabbar.is-fixed{
+	z-index: 100;
+}
+
+.mint-header ~ .mint-tabbar ~ .mint-container{
+	padding: 40px 0 55px 0;
+}
+.amap-container .mint-tab-container-wrap{
+	height: 100%;
+	background-color: #fff;
+}
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ellipsis2 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: normal!important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
