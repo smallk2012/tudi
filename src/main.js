@@ -13,6 +13,8 @@ import store from './vuex/store'
 
 import '../static/style.css'
 
+import * as types from './vuex/types'
+
 Vue.config.productionTip = false
 
 Vue.use(Mint);
@@ -28,6 +30,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  store.commit(types.CUR_PAGE, to.name);
   next();
 })
 

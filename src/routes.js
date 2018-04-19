@@ -1,28 +1,34 @@
-import Home from './pages/Home.vue'
-import Work from './pages/Work.vue'
-import WorkDetail from './pages/WorkDetail.vue'
-
 let routes = [{
-		name: '新工程',
-		path: '/home',
-		component: Home
-	},
-	{
-		name: '执行中',
-		path: '/work',
-		component: Work
-	},
-	{
-		name: '详情',
-		path: '/workdetail',
-		component: WorkDetail
-	},
-	{
-		path: '*',
-		redirect: {
-			path: '/home'
-		}
+	name: 'home',
+	path: '/home',
+	component: resolve => require(['@/pages/Home.vue'], resolve)
+},
+/*{
+	name: 'work',
+	path: '/work',
+	component: resolve => require(['@/pages/Work.vue'], resolve)
+},
+{
+	name: 'workdetail',
+	path: '/workdetail',
+	component: resolve => require(['@/pages/WorkDetail.vue'], resolve)
+},
+{
+	name: 'workend',
+	path: '/workend',
+	component: resolve => require(['@/pages/WorkEnd.vue'], resolve)
+},
+{
+	name: 'setting',
+	path: '/setting',
+	component: resolve => require(['@/pages/Setting.vue'], resolve)
+},*/
+{
+	path: '*',
+	redirect: {
+		path: '/home'
 	}
+}
 ];
 
 export default routes;

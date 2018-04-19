@@ -28,6 +28,7 @@ entry: {
 }*/
 //请求的配置文件
 export default {
+	debug:true,
 	baseURL : "/demo/ajax/jsonx.php",
 	errback: function(err){
 		let res = err.response;
